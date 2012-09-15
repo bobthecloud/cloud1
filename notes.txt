@@ -1,0 +1,103 @@
+Rails todo
+
+Review code challenge
+
+Write Test Cases
+
+Gather some data
+		X (10 movies)
+		X (5 actors)
+
+Get env setup
+
+Create inital git reposiory
+	new git account for this
+	
+Create schema/migrations
+
+	Movies
+	 name, 
+	 release date, 
+	 summary, and 
+	 ASIN (Amazon product ID)
+	 Image?
+		
+	
+	Actors
+		 name, 
+		 date of birth 
+		 gender
+	
+	Direcector (same as actor)  (Do we create new data structre or use Actor/Director)
+		 name, 
+		 date of birth 
+		 gender
+
+check project into git
+
+Migration to load data - maybe rake script
+
+
+
+
+
+Data
+ Movies	
+	The Lord Of The Rings: The Fellowship Of The Ring Starring Elijah Wood, Ian McKellen, Liv Tyler and Viggo Mortensen	Director Peter Jackson
+	Lord of the Rings: The Two Towers Starring Elijah Wood, Ian McKellen, Liv Tyler and Viggo Mortensen	Director: Peter Jackson
+	Lord of the Rings: The Return of the King Starring Elijah Wood, Ian McKellen, Liv Tyler and Viggo Mortensen	Director: Peter Jackson
+	Miss Congeniality Starring Sandra Bullock, William Shatner and Ernie Hudson	Director: Donald Petrie
+	Sleeping Dictionary Starring Hugh Dancy, Jessica Alba, Brenda Blethyn and Emily Mortimer	Director: Guy Jenkin
+	The Texas Chainsaw Massacre Starring Jessica Biel, Jonathan Tucker, Erica Leerhsen, et al. (2004)	Director:Marcus Nispel
+	A-Team, The (Extended Cut) Starring Liam Neeson, Bradley Cooper, Sharlto Copley, et al. 	Director:Joe Carnahan
+	King Kong vs. Godzilla Starring Michael Keith and Mie Hama (2009) 	Director:Ishirô Honda
+	King Kong Starring Fay Wray, Robert Armstrong and Bruce Cabot (2006) Director: Merian C. Cooper	 	(uncredited) 	Ernest B. Schoedsack	 	(uncredited) 
+	
+	Actors
+
+		Elijah Wood
+		http://www.imdb.com/name/nm0000704/bio
+				Date of Birth 28 January 1981, Cedar Rapids, Iowa, USA
+				Birth Name		Elijah Jordan Wood
+				Nickname			Elwood				Monkey				Lijah
+				Height				5' 6" (1.68 m) 
+
+
+
+		Ian McKellen
+		http://www.imdb.com/name/nm0005212/
+			Date of Birth	25 May 1939, Burnley, Lancashire, England, UK
+			Birth NameIan Murray McKellen
+			Height	5' 11" (1.80 m)
+
+			
+		Liv Tyler
+			http://www.imdb.com/name/nm0000239/bio
+			Date of Birth	1 July 1977, New York City, New York, USA
+			Birth Name	Liv Rundgren Tyler
+			Nickname	Liver	Livy
+			Height	5' 10" (1.78 m) 
+			
+		Viggo Mortensen
+			http://www.imdb.com/name/nm0001557
+
+	
+	Asert movie total 10
+	Assert 3 lotr movies
+	Assert Elijah Wood in 3 all lotr movies
+	
+	Assert image src = xxx for kingkong
+	
+	Assert A-Team Bad movie
+	
+	Negative Assertions
+		Assert Mighty Joe Young not in list
+		Assert Vitto not in actor list
+		Assert Liv Tyler born XXX
+		Assert Lib Tyler nickname not Spam
+		
+		gmail
+		bobthecloud
+		cloudzilla2012
+		
+		
