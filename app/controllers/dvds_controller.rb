@@ -3,6 +3,7 @@ class DvdsController < ApplicationController
   # GET /dvds.json
   def index
     @dvds = Dvd.all
+    get_all_actors
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +15,7 @@ class DvdsController < ApplicationController
   # GET /dvds/1.json
   def show
     @dvd = Dvd.find(params[:id])
+    get_all_actors
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,6 +27,7 @@ class DvdsController < ApplicationController
   # GET /dvds/new.json
   def new
     @dvd = Dvd.new
+    get_all_actors
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,12 +38,14 @@ class DvdsController < ApplicationController
   # GET /dvds/1/edit
   def edit
     @dvd = Dvd.find(params[:id])
+    get_all_actors
   end
 
   # POST /dvds
   # POST /dvds.json
   def create
     @dvd = Dvd.new(params[:dvd])
+    get_all_actors
 
     respond_to do |format|
       if @dvd.save
@@ -57,6 +62,7 @@ class DvdsController < ApplicationController
   # PUT /dvds/1.json
   def update
     @dvd = Dvd.find(params[:id])
+    get_all_actors
 
     respond_to do |format|
       if @dvd.update_attributes(params[:dvd])
@@ -80,4 +86,9 @@ class DvdsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def get_all_actors
+    @actors = Actor.find(:all, :order => :name)
+  end
+
 end

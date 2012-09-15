@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Dvd:</b>
+  <%= @actorlist.dvd_id %>
+</p>
+
+<p>
+  <b>Actor:</b>
+  <%= @actorlist.actor_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_actorlist_path(@actorlist) %> |
+<%= link_to 'Back', actorlists_path %>

@@ -1,4 +1,8 @@
 Cloud1::Application.routes.draw do
+  resources :dvd_actors
+
+  resources :actorlists
+
   resources :directors
 
   resources :actors

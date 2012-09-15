@@ -27,6 +27,22 @@
     <%= f.label :asin %><br />
     <%= f.text_field :asin %>
   </div>
+<div class="field">
+    <%= f.label :actors %><br />
+<% @actors.each do |actor| %>
+			<%= check_box_tag(
+                            "dvd[dvd_actor][#{actor.id}]", 
+                            "1", 
+                            @dvd.actors.detect{|d| d == actor}) %>
+			<%= "#{actor.name}"%><br />
+		<% end %>
+
+</div>
+
+<div class="field">
+
+</div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
