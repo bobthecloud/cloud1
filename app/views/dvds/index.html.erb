@@ -16,7 +16,7 @@
     <td><%= dvd.name %></td>
     <td><%= dvd.date %></td>
     <td><%= dvd.summary %></td>
-    <td><%= dvd.asin %></td>
+    <td><%= link_to dvd.asin, dvd.asinurl %></td>
     <td><%= link_to 'Show', dvd %></td>
     <td><%= link_to 'Edit', edit_dvd_path(dvd) %></td>
     <td><%= link_to 'Destroy', dvd, method: :delete, data: { confirm: 'Are you sure?' } %></td>
