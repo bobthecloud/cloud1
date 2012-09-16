@@ -25,16 +25,16 @@ Actors/Directors Completed
  add/view/edit/remove Actors, and upon removal, have the association rows binding them to movies be cleared.
 
 Todo
- Only name and gender shall be mandatory.
- Name shall enforce uniqueness.
- When editing an Actor, I must be able to add to/remove from the set of movies that they have been in.
- When viewing an Actor, I must see a list of movies they have been in.
+* Only name and gender shall be mandatory.
+* Name shall enforce uniqueness.
+* When editing an Actor, I must be able to add to/remove from the set of movies that they have been in.
+* When viewing an Actor, I must see a list of movies they have been in.
 	
 
 Optional Features
-Need test cases 
-Need scripts gen test data
-Have one: rake unittest:newdvd
+* Need test cases 
+* Need scripts gen test data
+* Have one: rake unittest:newdvd
 
 Need automation to build and run test cases
 
@@ -42,15 +42,10 @@ Need automation to build and run test cases
 Misc:
 
 Migrations to create schema
-<p>
-rails generate scaffold dvd name:string date:date summary:string asin:string
-<p>
-rails generate scaffold actor name:string dob:date gender:string
-<p>
-rails generate scaffold director name:string dob:date gender:string
-<p>
-rails generate scaffold dvd_actor dvd_id:integer actor_id:integer
-<p>
+* rails generate scaffold dvd name:string date:date summary:string asin:string
+* rails generate scaffold actor name:string dob:date gender:string
+* rails generate scaffold director name:string dob:date gender:string
+* rails generate scaffold dvd_actor dvd_id:integer actor_id:integer
 
 Bugs:
 
