@@ -42,10 +42,15 @@ Need automation to build and run test cases
 Misc:
 
 Migrations to create schema
+<p>
 rails generate scaffold dvd name:string date:date summary:string asin:string
+<p>
 rails generate scaffold actor name:string dob:date gender:string
+<p>
 rails generate scaffold director name:string dob:date gender:string
+<p>
 rails generate scaffold dvd_actor dvd_id:integer actor_id:integer
+<p>
 
 Bugs:
 
