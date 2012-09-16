@@ -100,4 +100,38 @@ Data
 		bobthecloud
 		cloudzilla2012
 		
+		https://github.com/bobthecloud/cloud1.git
+
 		
+		export JRUBY_OPTS=--1.9
+		
+		rails generate controller welcome index
+		
+		rails generate scaffold dvd name:string date:date summary:string asin:string
+	 release date, 
+	 summary, and 
+	 ASIN (Amazon product ID)
+	 Image?
+		
+	
+	Actors
+		rails generate scaffold actor name:string dob:date gender:string
+	
+		 name, 
+		 date of birth 
+		 gender
+	
+	Direcector (same as actor)  (Do we create new data structre or use Actor/Director)
+		rails generate scaffold director name:string dob:date gender:string
+
+		 name, 
+		 date of birth 
+		 gender
+
+rails generate controller welcome index
+		
+		rails generate scaffold dvd name:string date:date summary:string asin:string
+		rails generate scaffold actor name:string dob:date gender:string
+		rails generate scaffold director name:string dob:date gender:string
+		
+		rails generate scaffold dvd_actor dvd_id:integer actor_id:integer

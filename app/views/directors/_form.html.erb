@@ -19,9 +19,9 @@
     <%= f.label :dob %><br />
     <%= f.date_select :dob %>
   </div>
-  <div class="field">
-    <%= f.label :gender %><br />
-    <%= f.text_field :gender %>
+ <div class="field">
+    <%= f.label  :gender %><br />
+    <%= f.select :gender,options_for_select([ "Male", "Female" ], "Male") %>
   </div>
   <div class="actions">
     <%= f.submit %>

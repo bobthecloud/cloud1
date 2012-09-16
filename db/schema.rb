@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120915213150) do
+ActiveRecord::Schema.define(:version => 20120915214000) do
 
   create_table "actorlists", :force => true do |t|
     t.integer  "dvd_id"
@@ -48,8 +48,9 @@ ActiveRecord::Schema.define(:version => 20120915213150) do
     t.date     "date"
     t.string   "summary"
     t.string   "asin"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "director_id"
   end
 
 end
