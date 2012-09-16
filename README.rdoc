@@ -19,6 +19,7 @@ When viewing a DVD, I should have a clickable link to the Amazon product page, i
 Todo
 Add field integrity testing
 
+
 Actors/Directors Completed
 
  add/view/edit/remove Actors, and upon removal, have the association rows binding them to movies be cleared.
@@ -41,10 +42,10 @@ Need automation to build and run test cases
 Misc:
 
 Migrations to create schema
-		rails generate scaffold dvd name:string date:date summary:string asin:string
-		rails generate scaffold actor name:string dob:date gender:string
-		rails generate scaffold director name:string dob:date gender:string
-		rails generate scaffold dvd_actor dvd_id:integer actor_id:integer
+rails generate scaffold dvd name:string date:date summary:string asin:string
+rails generate scaffold actor name:string dob:date gender:string
+rails generate scaffold director name:string dob:date gender:string
+rails generate scaffold dvd_actor dvd_id:integer actor_id:integer
 
 Bugs:
 
