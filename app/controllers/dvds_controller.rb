@@ -47,7 +47,7 @@ class DvdsController < ApplicationController
   # POST /dvds.json
   def create
     @dvd = Dvd.new(params[:dvd])
-
+		get_all_actors
     respond_to do |format|
       if @dvd.save
         format.html { redirect_to @dvd, notice: 'Dvd was successfully created.' }

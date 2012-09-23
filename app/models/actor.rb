@@ -1,8 +1,11 @@
 class Actor < ActiveRecord::Base
+  validates_presence_of  :name
+  validates_uniqueness_of :name
+  validates_presence_of  :gender
   attr_accessible :dvd_actor, :dob, :gender, :name
   has_many :dvd_actor
   has_many :dvds, :through => :dvd_actor
- attr_accessor :dvd_actor
+  attr_accessor :dvd_actor
   after_save :update_dvds
   
   GENDER_TYPES = ["Mail", "Female", "Other"]

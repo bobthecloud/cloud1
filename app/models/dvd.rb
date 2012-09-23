@@ -18,5 +18,6 @@ class Dvd < ActiveRecord::Base
     actors.delete_all
     selected_actors = dvd_actor.nil? ? [] : dvd_actor.keys.collect{|id| Actor.find_by_id(id)}
     selected_actors.each {|actor| self.actors << actor}
+    
   end
 end

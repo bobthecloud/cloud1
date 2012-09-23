@@ -2,5 +2,16 @@
 
 <%= render 'form' %>
 
+
+<b>DVDs Directed</b>
+<br>
+ 
+ <% @dvds.each do |dvd| %>
+    
+     <%= link_to "#{dvd.name}", dvd_path("#{dvd.id}") %> <br> 
+	
+ <% end %>
+ 
+ 
 <%= link_to 'Show', @director %> |
 <%= link_to 'Back', directors_path %>

@@ -29,6 +29,7 @@
   </div>
 <div class="field">
     <%= f.label :actors %><br />
+    
 <% @actors.each do |actor| %>
 			<%= check_box_tag(
                             "dvd[dvd_actor][#{actor.id}]", 

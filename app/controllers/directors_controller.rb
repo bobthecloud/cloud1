@@ -14,7 +14,7 @@ class DirectorsController < ApplicationController
   # GET /directors/1.json
   def show
     @director = Director.find(params[:id])
-
+		get_dvds
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @director }
@@ -25,7 +25,7 @@ class DirectorsController < ApplicationController
   # GET /directors/new.json
   def new
     @director = Director.new
-
+		
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @director }
@@ -35,13 +35,14 @@ class DirectorsController < ApplicationController
   # GET /directors/1/edit
   def edit
     @director = Director.find(params[:id])
+    get_all_dvds
   end
 
   # POST /directors
   # POST /directors.json
   def create
     @director = Director.new(params[:director])
-
+		get_all_dvds
     respond_to do |format|
       if @director.save
         format.html { redirect_to @director, notice: 'Director was successfully created.' }
@@ -81,3 +82,25 @@ class DirectorsController < ApplicationController
     end
   end
 end
+
+ 
+  def get_all_dvds
+    @dvds = Dvd.find(:all, :order => :name)
+  end
+  
+  
+ 
+  def get_dvds
+  #pass in the id of the director
+  id = params[:id].to_s
+  @dvds = []
+  	Dvd.find_each do |dvd| 
+  		director_id = dvd.director_id.to_s
+  		
+  		if id == director_id 
+  			@dvds << dvd
+  		end
+  	end
+  end
+  
+  

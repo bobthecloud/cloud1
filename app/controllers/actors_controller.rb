@@ -26,7 +26,7 @@ class ActorsController < ApplicationController
   # GET /actors/new.json
   def new
     @actor = Actor.new
-get_all_dvds
+		get_all_dvds
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @actor }
@@ -60,7 +60,6 @@ get_all_dvds
   # PUT /actors/1.json
   def update
     @actor = Actor.find(params[:id])
-    puts "actor id = #{:id} actors = #{@actor}"
 		get_all_dvds
     respond_to do |format|
       if @actor.update_attributes(params[:actor])

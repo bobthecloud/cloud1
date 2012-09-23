@@ -16,5 +16,18 @@
 </p>
 
 
+ 
+  
+<b>DVDs Directed</b>
+<br>
+ 
+ <% @dvds.each do |dvd| %>
+    
+     <%= link_to "#{dvd.name}", dvd_path("#{dvd.id}") %> <br> 
+	
+ <% end %>
+
+
+<p>
 <%= link_to 'Edit', edit_director_path(@director) %> |
 <%= link_to 'Back', directors_path %>
