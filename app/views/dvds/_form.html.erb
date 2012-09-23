@@ -36,11 +36,15 @@
                             @dvd.actors.detect{|d| d == actor}) %>
 			<%= "#{actor.name}"%><br />
 		<% end %>
-
 </div>
 
+<p>
+  Current Director:
+  <%= @thedirector %>
+</p>
+
 <div class="field">
-    <%= f.label :director %><br />
+    <%= f.label :director, "Director List" %><br />
     <%= f.select :director_id, options_from_collection_for_select(Director.all, :id, :name) %>
 </div>
 

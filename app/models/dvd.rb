@@ -6,9 +6,12 @@ class Dvd < ActiveRecord::Base
   has_many :actors, :through => :dvd_actor
   has_one  :director
   attr_accessor :dvd_actor
+  
   after_save :update_actors
+  
   def asinurl
-    "https:///fffffff/#{self.asin}"
+  #Should we move this out to yaml or some other external config file?
+   "http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Dmovies-tv&field-keywords=#{self.asin}"
   end
   private 
   def update_actors

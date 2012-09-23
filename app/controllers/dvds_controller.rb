@@ -16,6 +16,7 @@ class DvdsController < ApplicationController
   def show
     @dvd = Dvd.find(params[:id])
     get_all_actors
+    get_director
 
     respond_to do |format|
       format.html # show.html.erb
@@ -39,6 +40,7 @@ class DvdsController < ApplicationController
   def edit
     @dvd = Dvd.find(params[:id])
     get_all_actors
+    get_director
   end
 
   # POST /dvds
@@ -62,6 +64,7 @@ class DvdsController < ApplicationController
   def update
     @dvd = Dvd.find(params[:id])
     get_all_actors
+    get_director
 
     respond_to do |format|
       if @dvd.update_attributes(params[:dvd])
@@ -89,4 +92,14 @@ class DvdsController < ApplicationController
   def get_all_actors
     @actors = Actor.find(:all, :order => :name)
   end
+
+
+  def get_director
+  	 tdvd = Dvd.find(params[:id])
+  	 director_id = tdvd.director_id
+  	 dname = Director.find(director_id)
+  	 @thedirector = dname.name
+
+  end
+  
 end

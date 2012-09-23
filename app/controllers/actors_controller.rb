@@ -3,7 +3,7 @@ class ActorsController < ApplicationController
   # GET /actors.json
   def index
     @actors = Actor.all
-
+		get_all_dvds
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @actors }
@@ -14,7 +14,8 @@ class ActorsController < ApplicationController
   # GET /actors/1.json
   def show
     @actor = Actor.find(params[:id])
-
+    #get_all_dvds
+		get_all_dvds_for_actor
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @actor }
@@ -25,7 +26,7 @@ class ActorsController < ApplicationController
   # GET /actors/new.json
   def new
     @actor = Actor.new
-
+get_all_dvds
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @actor }
@@ -35,12 +36,14 @@ class ActorsController < ApplicationController
   # GET /actors/1/edit
   def edit
     @actor = Actor.find(params[:id])
+    get_all_dvds
   end
 
   # POST /actors
   # POST /actors.json
   def create
     @actor = Actor.new(params[:actor])
+    get_all_dvds
 
     respond_to do |format|
       if @actor.save
@@ -57,7 +60,8 @@ class ActorsController < ApplicationController
   # PUT /actors/1.json
   def update
     @actor = Actor.find(params[:id])
-
+    puts "actor id = #{:id} actors = #{@actor}"
+		get_all_dvds
     respond_to do |format|
       if @actor.update_attributes(params[:actor])
         format.html { redirect_to @actor, notice: 'Actor was successfully updated.' }
@@ -80,4 +84,20 @@ class ActorsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  
+  def get_all_dvds
+    @dvds = Dvd.find(:all, :order => :name)
+  end
+  
+    
+  def get_all_dvds_for_actor
+   # @ndvds = Dvd.find_by_name(:name)
+        @dvds = Dvd.find(:all, :order => :name)
+
+				
+  end
+  
+
 end
+

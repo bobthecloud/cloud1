@@ -24,6 +24,18 @@
   </div>
 <div
   <div class="actions">
+  
+ 
+
+
+ <% @dvds.each do |dvd| %>
+			<%= check_box_tag(
+                            "actor[dvd_actor][#{dvd.id}]", 
+                            "1", 
+                            @actor.dvds.detect{|d| d == dvd}) %>
+			<%= "#{dvd.name}"%><br />
+		<% end %>
+  
     <%= f.submit %>
   </div>
 <% end %>

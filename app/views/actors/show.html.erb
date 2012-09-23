@@ -16,5 +16,19 @@
 </p>
 
 
+
+<% @dvds.each do |dvd| %>
+			<%= check_box_tag(
+                            "actor[dvd_actor][#{dvd.id}]", 
+                            "1", 
+                            @actor.dvds.detect{|d| d == dvd}) %>
+			<%= "#{dvd.name}"%><br />
+		<% end %>
+
+
+
+
+
 <%= link_to 'Edit', edit_actor_path(@actor) %> |
 <%= link_to 'Back', actors_path %>
+

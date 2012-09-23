@@ -133,5 +133,4 @@ rails generate controller welcome index
 		rails generate scaffold dvd name:string date:date summary:string asin:string
 		rails generate scaffold actor name:string dob:date gender:string
 		rails generate scaffold director name:string dob:date gender:string
-		
 		rails generate scaffold dvd_actor dvd_id:integer actor_id:integer
