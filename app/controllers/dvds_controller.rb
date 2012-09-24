@@ -99,7 +99,6 @@ class DvdsController < ApplicationController
   	 director_id = tdvd.director_id
   	 dname = Director.find(director_id)
   	 @thedirector = dname.name
-
   end
   
 end

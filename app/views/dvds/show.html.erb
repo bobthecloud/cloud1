@@ -25,14 +25,13 @@
   <%= @thedirector %>
 </p>
 
-
 <% @actors.each do |actor| %>
 			<%= check_box_tag(
-                            "dvd[dvd_actor][#{actor.id}]", 
-                            "1", 
-                            @dvd.actors.detect{|d| d == actor}) %>
-			<%= "#{actor.name}"%><br />
-		<% end %>
+				"dvd[dvd_actor][#{actor.id}]", 
+				"1", 
+				@dvd.actors.detect{|d| d == actor}) %>
+				<%= "#{actor.name}"%><br />
+<% end %>
 		
 </div>
 

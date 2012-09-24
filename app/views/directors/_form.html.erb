@@ -12,15 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <b> <%= f.label :name %><br /> </b>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :dob %><br />
+   <b> <%= f.label :dob %><br /> </b>
     <%= f.date_select :dob %>
   </div>
  <div class="field">
-    <%= f.label  :gender %><br />
+   <b> <%= f.label  :gender %><br /> </b>
     <%= f.select :gender,options_for_select([ "Male", "Female" ], "Male") %>
   </div>
   <div class="actions">

@@ -88,8 +88,6 @@ end
     @dvds = Dvd.find(:all, :order => :name)
   end
   
-  
- 
   def get_dvds
   #pass in the id of the director
   id = params[:id].to_s

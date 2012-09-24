@@ -12,40 +12,40 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+   <b> <%= f.label :name %><br /> </b>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :date %><br />
+  <b> <%= f.label :date %><br /> </b>
     <%= f.date_select :date %>
   </div>
   <div class="field">
-    <%= f.label :summary %><br />
+  <b> <%= f.label :summary %><br /> </b>
     <%= f.text_field :summary %>
   </div>
   <div class="field">
-    <%= f.label :asin %><br />
+  <b> <%= f.label :asin %><br /> </b>
     <%= f.text_field :asin %>
   </div>
 <div class="field">
-    <%= f.label :actors %><br />
+  <b> <%= f.label :actors %><br /> </b>
     
 <% @actors.each do |actor| %>
 			<%= check_box_tag(
                             "dvd[dvd_actor][#{actor.id}]", 
                             "1", 
                             @dvd.actors.detect{|d| d == actor}) %>
-			<%= "#{actor.name}"%><br />
+			<%= "#{actor.name}"%><br/>
 		<% end %>
 </div>
 
 <p>
-  Current Director:
+  <b> Current Director:</b> <br>
   <%= @thedirector %>
 </p>
 
 <div class="field">
-    <%= f.label :director, "Director List" %><br />
+    <b> <%= f.label :director, "Director List" %><br/> </b>
     <%= f.select :director_id, options_from_collection_for_select(Director.all, :id, :name) %>
 </div>
 

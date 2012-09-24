@@ -13,13 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20120915214000) do
 
-  create_table "actorlists", :force => true do |t|
-    t.integer  "dvd_id"
-    t.integer  "actor_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "actors", :force => true do |t|
     t.string   "name"
     t.date     "dob"
