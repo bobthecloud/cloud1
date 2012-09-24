@@ -1,4 +1,4 @@
-Cloudability Tech Challenge.
+Cloudability Tech Challenge. 
 
 Status
 Initial code spike completed.
