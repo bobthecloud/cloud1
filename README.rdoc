@@ -1,4 +1,4 @@
-Cloudability Tech Challeng.
+Cloudability Tech Challenge.
 
 Status
 Initial code spike completed.
@@ -7,17 +7,17 @@ Required Activities completed to date
 
 Manage DVDs Add/View/Edit/Remove
 Manage Actors Add/View/Edit/Remove
-Manage Directoris Add/View/Edit/Remove
+Manage Directors Add/View/Edit/Remove
 
 DVD Completed
 	
 When adding/editing a DVD I must be able to specify the actors/actresses in the movie. (many-to-many relationship). Done
-When adding/editing a DVD I must be able to specify the director of the movie. (many-to-one relationship). DOne
-When viewing a DVD, I should have a clickable link to the Amazon product page, if and only if an ASIN is present. Done
+When adding/editing a DVD I must be able to specify the director of the movie. (many-to-one relationship). Done
+When viewing a DVD, I should have a click able link to the Amazon product page, if and only if an ASIN is present. Done
 
 
-Todo
-Add field integrity testing - Still need Rpecs and tests
+Todo:
+Add field integrity testing - Still need RSpecs and tests
 
 
 Actors/Directors Completed
@@ -33,11 +33,10 @@ Todo
 
 Optional Features
 * Need test cases 
-* Need scripts gen test data
-* Have one: rake unittest:newdvd
+* Need scripts generate test data - Have one: rake unittest:newdvd
 * Was going to add Bacon factor but ran out of time
 
-Need automation to build and run test cases. Started.  Automated rake and intial load of data with FactoryGirl
+Need automation to build and run test cases. Started.  Automated rake and initial load of data with FactoryGirl
 
 bash -f doall.bash
 	drop the db, do the migration, load some data.  Want to run tests as well.
@@ -55,11 +54,13 @@ Bugs:
 The integrity checks do not work on create.  When they fail they cause the whole page to blow up.  Works on update, not quite sure why it does not work on create.  Fixed
 
 
-Overall: This may not scale well, but I think it meets the crireria of the challenge as far as I have time to do.  If I were to spend more time on it
+Overall: 
+
+This may not scale well, but I think it meets the criteria of the challenge as far as I have time to do.  If I were to spend more time on it
 I would like to 
-	* Have one power user interface - all this activity could easly take place on one screen
-	* Ajax bits to make the user interface easier - for instance a way to go get the ASIN numbe
+	* Have one power user interface - all this activity could easily take place on one screen
+	* Ajax bits to make the user interface easier - for instance a way to go get the ASIN number
 	*  A search page for movies that an actor is in - this could get to be a long list for some
-	* Test for scalability - I suspect throwing a ton of data at this would make the current user interface very ackward and the performance
-	   of the models migh break down as well.
-*  Spend time creating proper rspecs and integration tests.
+	* Test for scalability - I suspect throwing a ton of data at this would make the current user interface very awkward and the performance
+	   of the models might break down as well.
+*  Spend time creating proper RSpecs and integration tests.
